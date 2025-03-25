@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} The Clinic {% endblock %}
+{% block css_imports %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid mb-5 g-0">
+    <div class="row g-0">
+        <div class="col-12 col-md-2 g-0">
+            {% include 'includes/dashboard_sidebar.html' %}
+        </div>
+
+        <!--begin about-->
+        <div class="col-12 col-md-10 mt-5 mt-md-3 ps-5 text-center g-0">
+            
+            <!--intro-->
+            <h2>About this repo</h2>
+            <p>This repository includes the implementation of YOLO V11 live stream analysis in "Django", utilizing the 
+                3 default models of <b>Detection,Segmentation and Pose estimation</b>.</p>
+            <hr>
+
+            <!--partners-->
+            <div class="text-start mt-5 mt-md-3 ps-5 g-0">
+                <h4>Highlights:</h4>
+
+                <div class="text-center">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item text-center">
+                            <h4>My website</h4>
+                            <p>Byts N Bytes is where I shaped my work on the web.</p>
+                            <a href="https://www.bytsnbytes.com"><img class="img-fluid" src="{% static 'home/img/logo_prod_1.png' %}" style="width: 200px; display: inline-block !important;"></a>
+                        </div>
+
+                        <div class="item text-center"><h4>My portfolio</h4>
+                            <p>My previous projects and services.</p>
+                            <a href="https://www.bytsnbytes.com/portfolio"><img class="img-fluid" src="{% static 'home/img/e-commerce-6898102_1280.jpg' %}" style="width: 200px; display: inline-block !important;"></a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- end about-->
+
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,16 @@
+<div class="cs_sidebar text-small">
+  <!--   SIDEBAR   -->
+  <ul class="list-group">
+    <a class="list-group-item {% if '/' == request.path %}active{% endif %}" href="/"> Home </a>
+
+    <a class="list-group-item {% if '/detection/yolov11/?yolom=0' == request.path %}active{% endif %}" href="{% url 'yolo_11' %}?yolom=0"> YOLO V11 : Detect </a>
+
+    <a class="list-group-item {% if '?yolom=1' == request.path %}active{% endif %}" href="{% url 'yolo_11' %}?yolom=1">  YOLO V11 : Segment </a>
+
+    <a class="list-group-item {% if '?yolom=2/' == request.path %}active{% endif %}" href="{% url 'yolo_11'%}?yolom=2">  YOLO V11 : Pose estimation </a>
+
+    <a class="list-group-item {% if '/about/' in request.path %}active{% endif %}" href="/about"> About </a>
+
+  </ul>
+  <!--   SIDEBAR .//END   -->
+</div>

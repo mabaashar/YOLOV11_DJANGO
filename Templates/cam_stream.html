@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} The Clinic {% endblock %}
+{% block css_imports %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid mb-5 g-0">
+    <div class="row g-0">
+        <div class="col-12 col-md-2 g-0">
+            {% include 'includes/dashboard_sidebar.html' %}
+        </div>
+
+        <!--begin about-->
+        <div class="col-12 col-md-10 mt-5 mt-md-3 ps-5 text-center g-0">
+            
+                  <div class="col-12 text-center">
+                     <h2>YOLO View</h2>
+                   </div>
+                 <div class="col-12 text-center">
+                            {% if yolo_model == '0' %}
+                            <img src="{% url 'yolo_11_det' %}">
+                            {% elif yolo_model == '1' %}
+                            <img src="{% url 'yolo_11_seg' %}">
+                            {% elif yolo_model == '2' %}
+                            <img src="{% url 'yolo_11_pose' %}">
+                            {% else %}
+                            <img src="{% url 'yolo_11_det' %}">
+                            {% endif %}
+
+                </div> <!--col-->
+
+
+        </div>
+        <!-- end about-->
+
+    </div>
+</div>
+
+{% endblock content %}

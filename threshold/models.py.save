@@ -1,0 +1,52 @@
+from django.db import models
+from ecommerce.accounts import EcomCustomer
+# Create your models here.
+class Model_info(models.Model):
+    name = models.CharField(max_length=200,null=False)
+    describtion = models.CharField(max_length=900, null=True)
+    image = models.ImageField(upload_to='static/threshold/models/img/')
+class Image_upload(models.Model):
+    user = models.ForeignKey(EcomCustomer, on_delete=models.CASCADE) 
+    image = models.ImageField(blank=True,upload_to='static/threshold/img/')
+class Video_upload(models.Model):
+    user = models.ForeignKey(EcomCustomer, on_delete=models.CASCADE) 
+    video = models.FileField(blank=True,upload_to='static/threshold/video/')
+
+'''class threshold_element(models.Model):
+    user = models.ForeignKey(EcomCustomer, on_delete=models.CASCADE)
+    area1 = models.CharField(max_length=200,blank=True,default='x')
+    cam_ip1 = models.CharField(max_length=900, blank=True,default='x')
+    area2 = models.CharField(max_length=200,blank=True,default='x')
+    cam_ip2 = models.CharField(max_length=900, blank=True,default='x')
+    area3 = models.CharField(max_length=200,blank=True,default='x')
+    cam_ip3 = models.CharField(max_length=900, blank=True,default='x')
+    area4 = models.CharField(max_length=200,blank=True,default='x')
+    cam_ip4 = models.CharField(max_length=900, blank=True,default='x')
+    area5 = models.CharField(max_length=200,blank=True,default='x')
+    cam_ip5 = models.CharField(max_length=900, blank=True,default='x')
+'''
+
+class Yolo_model(models.Model):
+    name = models.CharField(max_length=30)
+    actual_file = models.
+    #fix plural
+    class Meta:
+        verbose_name_plural = "categories"
+    def __str__(self):
+        return self.name
+
+class threshold_component(models.Model):
+#    class Meta:
+#        app_label = "t_comp"
+#        managed = True
+    user = models.ForeignKey(EcomCustomer, on_delete=models.CASCADE)
+    area1 = models.CharField(max_length=200,blank=True)
+    cam_ip1 = models.CharField(max_length=900, blank=True,)
+    area2 = models.CharField(max_length=200,blank=True,)
+    cam_ip2 = models.CharField(max_length=900, blank=True,)
+    area3 = models.CharField(max_length=200,blank=True,)
+    cam_ip3 = models.CharField(max_length=900, blank=True,)
+    area4 = models.CharField(max_length=200,blank=True,)
+    cam_ip4 = models.CharField(max_length=900, blank=True,)
+    area5 = models.CharField(max_length=200,blank=True,)
+    cam_ip5 = models.CharField(max_length=900, blank=True,)
