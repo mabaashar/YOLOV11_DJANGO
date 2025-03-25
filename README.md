@@ -8,7 +8,6 @@ This project has the implementation of 3 YOLO V11 default models on live camera 
 3-Default pose estimation model
 
 You can find the project in the "master" branch of this repo.
-
 ======================================
 
 
